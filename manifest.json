@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "GoEthena Auto Clicker",
+  "version": "1.0",
+  "description": "Automatically scrolls and clicks through GoEthena training modules",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://app.goethena.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://app.goethena.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GoEthena Auto Clicker"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 
